@@ -5,11 +5,11 @@
 <bean class="com.meituan.trip.eswrapper.es.connection.ESConnection" id="esConnections">
     <constructor-arg name="transportAddresses">
         <list>
-            <ref bean="staging01"/>
-            <ref bean="staging02"/>
+            <ref bean="instance1"/>
+            <ref bean="instance2"/>
         </list>
     </constructor-arg>
-    <constructor-arg name="clusterName" value="trip.c.es.stage"/>
+    <constructor-arg name="clusterName" value="a.b.c"/>
 </bean>
 <bean id="inetSocketAddress1" class="java.net.InetSocketAddress">
     <constructor-arg index="0" value="es server ip地址"/>
@@ -19,10 +19,10 @@
     <constructor-arg index="0" value="es server ip地址"/>
     <constructor-arg index="1" value="es server 端口号"/>
 </bean>
-<bean id="staging01" class="org.elasticsearch.common.transport.InetSocketTransportAddress">
+<bean id="instance1" class="org.elasticsearch.common.transport.InetSocketTransportAddress">
     <constructor-arg name="address" ref="inetSocketAddress1"/>
 </bean>
-<bean id="staging02" class="org.elasticsearch.common.transport.InetSocketTransportAddress">
+<bean id="instance2" class="org.elasticsearch.common.transport.InetSocketTransportAddress">
     <constructor-arg name="address" ref="inetSocketAddress2"/>
 </bean>
  
