@@ -1,7 +1,7 @@
 # esclient_2.3.3
 对es2.3.3原生api的封装
 # 接入
-···
+```
 <bean class="com.meituan.trip.eswrapper.es.connection.ESConnection" id="esConnections">
     <constructor-arg name="transportAddresses">
         <list>
@@ -30,4 +30,4 @@
 <bean class="com.meituan.trip.eswrapper.es.operation.PlentyfulESOperationImpl" id="esOperations">
     <property name="esConnections" ref="esConnections"/>
 </bean>
-···
+```
